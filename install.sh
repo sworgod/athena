@@ -48,4 +48,4 @@ if [ ! -f "/usr/sbin/firewalld" ]; then
   firewall-cmd --reload
 fi
 
-server athena start
+service athena start
