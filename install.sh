@@ -11,10 +11,11 @@ cat <<EOF >/etc/init.d/athena
 
 start(){
   cd /usr/local/athena/
-  nohup ./athena &
+  nohup ./athena >/dev/null 2>&1 &
   echo "Athena Service Starting..."
   sleep 3
   cat ./config
+  echo -e "\n"
 }
 
 stop(){
@@ -37,3 +38,12 @@ EOF
 chmod 777 /etc/init.d/athena
 chkconfig --add athena #添加到服务列表
 chkconfig athena on  #开启服务
+
+if [ ! -f "/usr/sbin/firewalld" ]; then
+  iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport 8120 -j ACCEPT
+  /etc/init.d/iptables save
+  /etc/init.d/iptables restart
+  else
+  firewall-cmd --permanent --zone=public --add-port=8120/tcp
+  firewall-cmd --reload
+fi
