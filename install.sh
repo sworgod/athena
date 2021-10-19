@@ -2,7 +2,7 @@
 
 mkdir /usr/local/athena
 
-curl -O /usr/local/athena/athena https://raw.githubusercontent.com/Sworgod/Athena/master/athena
+curl -o /usr/local/athena/athena https://raw.githubusercontent.com/Sworgod/Athena/master/athena
 chmod 777 /usr/local/athena/athena
 cat <<EOF >/etc/init.d/athena
 #!/bin/bash
