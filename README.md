@@ -18,6 +18,8 @@ bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/uninst
 bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/reinstall.sh)
 ```
 
+## Other
+
 ```
 mkdir /usr/local/athena
 wget -O /usr/local/athena/athena https://raw.githubusercontent.com/Sworgod/Athena/master/athena
