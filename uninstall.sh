@@ -14,3 +14,6 @@ if [ ! -f "/usr/sbin/firewalld" ]; then
   firewall-cmd --permanent --zone=public --remove-port=8120/tcp
   firewall-cmd --reload
 fi
+
+echo Uninstall Success
+echo -e "Uninstall Success.\n"
