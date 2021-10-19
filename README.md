@@ -6,6 +6,13 @@
 bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/install.sh)
 ```
 
+## Uninstall 
+
+```
+bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/uninstall.sh)
+```
+
+
 ```
 mkdir /usr/local/athena
 wget -O /usr/local/athena/athena https://raw.githubusercontent.com/Sworgod/Athena/master/athena
