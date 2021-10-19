@@ -12,6 +12,11 @@ bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/instal
 bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/uninstall.sh)
 ```
 
+# Reinstall
+
+```
+bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/reinstall.sh)
+```
 
 ```
 mkdir /usr/local/athena
