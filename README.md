@@ -14,7 +14,7 @@ ln -s /usr/local/athena/athena /usr/local/bin
 ```
 
 ```
-nohup ./athena &
+nohup /usr/local/athena/athena &
 ```
 
 ```
