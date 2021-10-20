@@ -1,4 +1,5 @@
 #!/bin/bash
+
 service athena stop
 chkconfig athena off #关闭服务
 chkconfig --del athena
@@ -15,5 +16,4 @@ if [ ! -f "/usr/sbin/firewalld" ]; then
   firewall-cmd --reload
 fi
 
-echo Uninstall Success
 echo -e "Uninstall Success.\n"
