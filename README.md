@@ -12,6 +12,12 @@ bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/instal
 bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/uninstall.sh)
 ```
 
+## Upgrade
+
+```
+bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/upgrade.sh)
+```
+
 ## Reinstall
 
 ```
