@@ -16,4 +16,4 @@ if [ ! -f "/usr/sbin/firewalld" ]; then
   firewall-cmd --reload
 fi
 
-echo -e "Uninstall Success.\n"
+echo -e "Uninstall Athena Success.\n"
