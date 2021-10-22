@@ -3,32 +3,32 @@
 ## Install
 
 ```
-bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/install.sh)
+bash <(curl -s -L https://raw.githubusercontent.com/sworgod/athena/master/install.sh)
 ```
 
 ## Uninstall 
 
 ```
-bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/uninstall.sh)
+bash <(curl -s -L https://raw.githubusercontent.com/sworgod/athena/master/uninstall.sh)
 ```
 
 ## Upgrade
 
 ```
-bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/upgrade.sh)
+bash <(curl -s -L https://raw.githubusercontent.com/sworgod/athena/master/upgrade.sh)
 ```
 
 ## Reinstall
 
 ```
-bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/reinstall.sh)
+bash <(curl -s -L https://raw.githubusercontent.com/sworgod/athena/master/reinstall.sh)
 ```
 
 ## Other
 
 ```
 mkdir /usr/local/athena
-wget -O /usr/local/athena/athena https://raw.githubusercontent.com/Sworgod/Athena/master/athena
+wget -O /usr/local/athena/athena https://raw.githubusercontent.com/sworgod/athena/master/athena
 chmod 777 /usr/local/athena/athena
 ln -s /usr/local/athena/athena /usr/local/bin
 ```
