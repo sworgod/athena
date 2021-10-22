@@ -1,1 +1,4 @@
+/.idea
 /athena.go
+/go.mod
+/config
