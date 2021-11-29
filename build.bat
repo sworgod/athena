@@ -8,4 +8,4 @@ go build athena.go
 :: Windows
 set GOARCH=amd64
 SET GOOS=windows
-@REM go build main.go
+go build athena.go
