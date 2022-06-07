@@ -10,25 +10,42 @@ cat <<EOF >/etc/init.d/athena
 # chkconfig: - 85 15
 
 start(){
-  cd /usr/local/athena/
-  nohup ./athena >/dev/null 2>&1 &
-  echo "Athena Service Starting..."
-  sleep 3
-  cat ./config
-  echo -e "\n"
+  isStart=$(ps aux|grep -E '\.\/athena'|grep -v grep|awk '{print $2}'|xargs)
+  if [ "$isStart" == '' ];then
+    cd /usr/local/athena/
+    nohup ./athena >/dev/null 2>&1 &
+    echo "Athena Service Starting..."
+    sleep 3
+    cat ./config
+    echo -e "\n"
+  else
+    echo "Athena Service Already Running"
+  fi
 }
 
 stop(){
-  killall athena
+  pids=$(ps aux|grep -E '\.\/athena'|grep -v grep|awk '{print $2}'|xargs)
+  for p in ${pids[@]}
+  do
+    kill -9 $p &>/dev/null
+  done
+  #killall athena
   echo "Athena Service Stopped."
   sleep 1
 }
 case "\$1" in
     start) start;;
     stop) stop;;
-    restart) start;;
+    restart)
+        stop
+    		sleep 1
+        start
+    ;;
     reload) start;;
-    status) start;;
+    status)
+        cat /usr/local/athena/config
+        echo -e "\n"
+    ;;
 *)
 echo "\$0 {start|stop|restart|reload|status}"
 exit 4

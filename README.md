@@ -1,27 +1,55 @@
 # Athena
 
-## Install
+## Install and Uninstall
+
+### Install
 
 ```
 bash <(curl -s -L https://raw.githubusercontent.com/sworgod/athena/master/install.sh)
 ```
 
-## Uninstall 
+### Uninstall 
 
 ```
 bash <(curl -s -L https://raw.githubusercontent.com/sworgod/athena/master/uninstall.sh)
 ```
 
-## Upgrade
+### Upgrade
 
 ```
 bash <(curl -s -L https://raw.githubusercontent.com/sworgod/athena/master/upgrade.sh)
 ```
 
-## Reinstall
+### Reinstall
 
 ```
 bash <(curl -s -L https://raw.githubusercontent.com/sworgod/athena/master/reinstall.sh)
+```
+
+## Service
+
+### Start
+
+```shell
+service athena start
+```
+
+### Restart
+
+```shell
+service athena restart
+```
+
+### Stop
+
+```shell
+service athena stop
+```
+
+### Config
+
+```shell
+service athena config
 ```
 
 ## Other
@@ -40,3 +68,5 @@ nohup /usr/local/athena/athena &
 ```
 killall athena
 ```
+
+
