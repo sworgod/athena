@@ -1,5 +1,5 @@
 /.idea
-/athena.go
+/*.go
 /go.mod
 /config
 /go.sum
