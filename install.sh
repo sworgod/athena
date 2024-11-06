@@ -29,7 +29,7 @@ stop(){
   do
     kill -9 $p &>/dev/null
   done
-  #killall athena
+  killall athena
   echo "Athena Service Stopped."
   sleep 1
 }
