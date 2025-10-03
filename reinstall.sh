@@ -1,5 +1,16 @@
 #!/bin/bash
 
-bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/uninstall.sh)
+service athena stop
+
+rm -rf /etc/init.d/athena
+rm -rf /usr/local/bin/athena
+rm -rf /usr/local/athena/athena
+
+echo -e "Delete Athena Success.\n"
+
 sleep 3
-bash <(curl -s -L https://raw.githubusercontent.com/Sworgod/Athena/master/install.sh)
+
+wget -O /usr/local/athena/athena https://raw.githubusercontent.com/Sworgod/Athena/master/athena
+chmod 777 /usr/local/athena/athena
+ln -s /usr/local/athena/athena /usr/local/bin
+service athena start
